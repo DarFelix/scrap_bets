@@ -10,10 +10,11 @@ This project scrapes football match results from a specified webpage, processes 
 
 ---
 
-## 🏗️ Project Architecture
+## 🏗️ Project architecture
 
 The project is structured as follows:
 
+```
 scrap_bests/
 │
 ├── README.md
@@ -29,14 +30,12 @@ scrap_bests/
 │   │   ├── scraper.py
 │   │   ├── treat_data.py
 │   │   └── main.py
+```
 
----
+## 📦 Package descriptions
 
-## 📦 Package Descriptions
+1. **src/stage3**: Contains modules for web scraping, data transformation, and database interactions in stage 3.
 
-- **stage3**: Contains modules for web scraping, data transformation, and database interactions in stage 3.
-- **main.py**: Contains init file for execute project.
----
 
 ## 🛠️ Technologies Used
 
@@ -46,9 +45,52 @@ scrap_bests/
 - **Pandas**: Data analysis and manipulation library.
 - **SQLAlchemy**: ORM for managing database interactions.
 
----
+## 🚀 Steps: installation and configuration
 
-## 🚀 Installation and Configuration
+1. Clone this repository:
+
+```bash
+git clone [https://github.com/your-username/soccer-results-scraper.git](https://github.com/DarFelix/scrap_bets.git)
+```
+1. Create a virtual environment using the following command, making sure you are in the project folder path (...activity3/):
+
+```bash
+python -m venv venv1
+```
+
+2. Activate the virtual environment from the same path using the command:
+
+```bash
+venv1\Scripts\activate
+```
+
+3. Install the required packages from the same path using the following command. This process may take a few seconds:
+
+```bash
+pip install psycopg2-binary pandas openpyxl sqlalchemy selenium webdriver-manager
+```
+
+4. Update Python's pip to avoid the yellow warning that appeared earlier:
+
+```bash
+python.exe -m pip install --upgrade pip
+```
+
+5. Ensure that the Chrome Driver executable file used in class (chromedriver.exe) is located in the following path:
+
+```bash
+...\activity3\src\stage3\static\driver\chromedriver.exe
+```
+
+6. Run the project's main script (make sure the Excel file containing the general list of teams is not open):
+
+```bash
+.../activity3/src/stage3/main.py
+```
+
+7. Check the console logs, scraping results, and the creation of tables with records in the PostgreSQL database.
+
+8. Execute the Power BI file and confirm the connection to the tb_report table to view the updated report.
 
 ### Prerequisites
 
@@ -56,46 +98,19 @@ scrap_bests/
 2. **Set Up PostgreSQL**: Install and configure [PostgreSQL](https://www.postgresql.org/download/).
 3. **Download ChromeDriver**: Ensure it matches your browser version ([ChromeDriver](https://sites.google.com/chromium.org/driver/)).
 
-### Steps
-
-1. Clone the repository:
-2. 
-   git clone https://github.com/your-username/soccer-results-scraper.git
-   cd soccer-results-scraper
-   
-Install Python dependencies:
-
-pip install -r requirements.txt
-Configure the project:
-
-Update the config.yaml file with your PostgreSQL credentials and the target URL.
-Ensure the chromedriver executable is in your PATH or specify its location in the code.
-Initialize the database:
-
-python -m scraper.database
-📘 Usage
-Run the scraper:
-
-python -m scraper.scraper
-Export data to a CSV file:
-
-python -m scraper.utils --export csv
-📊 Data Auditing
-The scraper includes logging and validation features:
-
-Logs: All scraping events are logged in data/logs/scraper.log.
-Validation: Ensures data consistency and completeness before database insertion.
-⚠️ Additional Considerations
+###⚠️ Additional Considerations
 Terms of Service: Ensure that scraping complies with the target website’s terms of service.
 Rate Limiting: Adjust scraping frequency to avoid server bans.
 Error Handling: The scraper includes basic exception handling but may require customization for specific scenarios.
-📝 License
+
+###📝 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-🤝 Contributions
+##🤝 Contributions
 Contributions are welcome!
 
 Fork the repository.
-Create a feature branch (git checkout -b feature-name).
-Submit a pull request with a detailed description of your changes.
+Create a _feature branch_ (git checkout -b feature-name).
+Submit a _pull request_ with a detailed description of your changes.
+
 Happy scraping! ⚽
