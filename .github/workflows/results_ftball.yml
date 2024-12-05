@@ -25,6 +25,8 @@ jobs:
         run: ./venv1/Scripts/activate   
       - name: paso3 - actualizar pip
         run: pip install --upgrade pip
+      - name: paso3.1 - actualizar pip
+        run: pip install setuptools
       - name: paso4 - instalar dependencias
         run: pip install -e .
       - name: paso5 - ejecutar proyecto
