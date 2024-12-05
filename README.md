@@ -98,15 +98,15 @@ python.exe -m pip install --upgrade pip
 2. **Set Up PostgreSQL**: Install and configure [PostgreSQL](https://www.postgresql.org/download/).
 3. **Download ChromeDriver**: Ensure it matches your browser version ([ChromeDriver](https://sites.google.com/chromium.org/driver/)).
 
-###⚠️ Additional Considerations
+## ⚠️ Additional Considerations
 Terms of Service: Ensure that scraping complies with the target website’s terms of service.
 Rate Limiting: Adjust scraping frequency to avoid server bans.
 Error Handling: The scraper includes basic exception handling but may require customization for specific scenarios.
 
-###📝 License
+## 📝 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-##🤝 Contributions
+## 🤝 Contributions
 Contributions are welcome!
 
 Fork the repository.
