@@ -1,0 +1,49 @@
+Información del DataFrame:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 40 entries, 0 to 39
+Data columns (total 12 columns):
+ #   Column           Non-Null Count  Dtype         
+---  ------           --------------  -----         
+ 0   id               40 non-null     int64         
+ 1   id_team          40 non-null     int64         
+ 2   value_position   40 non-null     object        
+ 3   current_points   40 non-null     object        
+ 4   played_games     40 non-null     object        
+ 5   win_games        40 non-null     object        
+ 6   draw_games       40 non-null     object        
+ 7   lost_games       40 non-null     object        
+ 8   goals_for        40 non-null     object        
+ 9   goals_against    40 non-null     object        
+ 10  date_creation    40 non-null     datetime64[ns]
+ 11  update_creation  40 non-null     datetime64[ns]
+dtypes: datetime64[ns](2), int64(2), object(8)
+memory usage: 3.9+ KB
+
+
+Estadísticas descriptivas:
+              id    id_team                  date_creation                update_creation
+count  40.000000  40.000000                             40                             40
+mean   20.500000  17.850000  2024-11-17 21:17:09.570936832  2024-11-17 21:17:09.571436032
+min     1.000000   1.000000     2024-11-17 21:16:37.853697     2024-11-17 21:16:37.853697
+25%    10.750000  10.750000  2024-11-17 21:16:37.853697024  2024-11-17 21:16:37.853697024
+50%    20.500000  18.500000  2024-11-17 21:17:09.570936832  2024-11-17 21:17:09.571436032
+75%    30.250000  25.500000  2024-11-17 21:17:41.288176896  2024-11-17 21:17:41.289175040
+max    40.000000  35.000000     2024-11-17 21:17:41.288177     2024-11-17 21:17:41.289175
+std    11.690452  10.224531                            NaN                            NaN
+
+Número de valores nulos por columna:
+id                 0
+id_team            0
+value_position     0
+current_points     0
+played_games       0
+win_games          0
+draw_games         0
+lost_games         0
+goals_for          0
+goals_against      0
+date_creation      0
+update_creation    0
+
+Dimensiones del DataFrame:
+Filas: 40, Columnas: 12

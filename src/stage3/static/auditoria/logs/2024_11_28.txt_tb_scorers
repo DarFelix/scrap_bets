@@ -1,0 +1,37 @@
+Información del DataFrame:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 140 entries, 0 to 139
+Data columns (total 6 columns):
+ #   Column           Non-Null Count  Dtype         
+---  ------           --------------  -----         
+ 0   id               140 non-null    int64         
+ 1   name_player      140 non-null    object        
+ 2   id_team          140 non-null    int64         
+ 3   current_goals    140 non-null    object        
+ 4   date_creation    140 non-null    datetime64[ns]
+ 5   update_creation  140 non-null    datetime64[ns]
+dtypes: datetime64[ns](2), int64(2), object(2)
+memory usage: 6.7+ KB
+
+
+Estadísticas descriptivas:
+             id     id_team                  date_creation                update_creation
+count  140.0000  140.000000                            140                            140
+mean    70.5000   22.657143  2024-11-26 15:13:55.208053504  2024-11-26 15:13:55.208650752
+min      1.0000    1.000000     2024-11-17 21:16:37.854694     2024-11-17 21:16:37.854694
+25%     35.7500   21.000000  2024-11-27 23:09:56.258199040  2024-11-27 23:09:56.259159040
+50%     70.5000   24.500000  2024-11-28 22:34:02.047239168  2024-11-28 22:34:02.047735040
+75%    105.2500   28.000000  2024-11-28 22:42:32.515809024  2024-11-28 22:42:32.515809024
+max    140.0000   35.000000     2024-11-28 22:49:17.771821     2024-11-28 22:49:17.772818
+std     40.5586    9.981113                            NaN                            NaN
+
+Número de valores nulos por columna:
+id                 0
+name_player        0
+id_team            0
+current_goals      0
+date_creation      0
+update_creation    0
+
+Dimensiones del DataFrame:
+Filas: 140, Columnas: 6
