@@ -14,17 +14,28 @@ This project scrapes football match results from a specified webpage, processes 
 
 The project is structured as follows:
 
-soccer-results-scraper/ │ ├── scraper/ │ ├── init.py # Package initialization │ ├── scraper.py # Core scraping logic using Selenium │ ├── database.py # Database models and interaction via SQLAlchemy │ ├── utils.py # Helper functions for data processing │ ├── data/ │ ├── logs/ # Logs generated during scraping │ ├── exports/ # Exported data in CSV/JSON formats │ ├── tests/ # Unit tests for scraping and database modules │ ├── requirements.txt # Python dependencies ├── README.md # Project documentation ├── LICENSE # MIT License └── config.yaml # Configuration file (e.g., database credentials, target URL)
+scrap_bests/
+│
+├── README.md
+├── requirements.txt
+├── autors.md
+├── origin_data.txt
+├── .gitignore
+├── src/
+│   ├── stage3/
+│   │   ├── confi.py
+│   │   ├── model.py
+│   │   ├── reader_excel.py
+│   │   ├── scraper.py
+│   │   ├── treat_data.py
+│   │   └── main.py
 
 ---
 
 ## 📦 Package Descriptions
 
-- **scraper**: Contains modules for web scraping, data transformation, and database interactions.
-- **data/logs**: Stores logs for tracking scraping events and debugging.
-- **data/exports**: Saves data in formats like CSV or JSON for external use.
-- **tests**: Unit tests to ensure code reliability and functionality.
-
+- **stage3**: Contains modules for web scraping, data transformation, and database interactions in stage 3.
+- **main.py**: Contains init file for execute project.
 ---
 
 ## 🛠️ Technologies Used
