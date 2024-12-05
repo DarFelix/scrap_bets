@@ -154,6 +154,7 @@ class Modelo:
         dict_rp = {}
         dict_rp["tb_report"] = df_report
         #se regresa diccionario con dataframe para reporteria
+        print("se devuelve dataframe de reporte ya transformado")
         return dict_rp
 
     def transform_dfs(self, dict_tbs):

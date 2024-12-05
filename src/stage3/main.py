@@ -6,9 +6,6 @@ import treat_data
 #1-se crea instancia de conexión a la base de datos
 model_db = Modelo(confi.host,confi.port, confi.nombredb,confi.user,confi.password)
 print("------------------------")
-#2-se crea esquema en base de datos
-model_db.create_schema(confi.schema)
-print("------------------------")
 #3-se crea instancia de la clase Scrapper
 scrapper = Scrapper(url=confi.url_tyc)
 print("------------------------")
@@ -31,15 +28,6 @@ print("------------------------")
 #9-se obtiene diccionario de dataframes
 dict_dfs = treat_data.create_dict_dfs(exist_tb_teams, df_positions_teams, df_scorers)
 print("------------------------")
-#10-se crea diccionario de querys de creación de tabla para cada dataframe
-dict_qrs_tables = treat_data.get_querys_create_tables_dfs(dict_dfs, confi.schema)
-print("------------------------")
-#11-se ejecuta creación de tablas en la base de datos si no existen
-model_db.create_tables(dict_qrs_tables, exist_tb_teams, True)
-print("------------------------")
-#12-se inserta información de los dataframes en cada tabla de la base de datos
-model_db.insert_tables(dict_dfs)
-print("------------------------")
 #13-se captura imagen de la tabla
 scrapper.screenshot_tb(xpath_tabla="//table")
 #14-se auditan tablas de base de datos
@@ -49,12 +37,5 @@ scrapper.close_driver()
 #------Creación de tabla para reporte en Power BI---------------------------------
 #16-se crea dataframe para reportería transformando y enriquenciendo la info disponible en base de datos
 dict_report = model_db.get_dict_rp()
-print("------------------------")
-#17-se crea diccionario de query para crear tabla de dataframe
-dict_qr_create_tb_report = treat_data.get_querys_create_tables_dfs(dict_report, confi.schema)
-print("------------------------")
-#18-se ejecuta creación de tabla de reporte BI en la base de datos
-model_db.create_tables(dict_qr_create_tb_report)
-print("------------------------")
-#19-se inserta información en tabla tb_report de la base de datos
-model_db.insert_tables(dict_report, mode_insert='replace')
+#se convierte dataframe a formato json
+dict_report["tb_report"].to_json("data.json")

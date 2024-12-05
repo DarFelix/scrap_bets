@@ -1,6 +1,6 @@
 ## Paso a paso Actividad 3
 
-1. Crea un entorno virtual con la siguiente línea de comandos, ubicandote en la ruta de la carpeta del proyecto (...activity3/):
+1. Crea un entorno virtual con la siguiente línea de comandos, ubicandote en la ruta de la carpeta del proyecto (...scrap_bets/):
 
     python -m venv venv1
     
@@ -18,11 +18,11 @@
 
 5. Verifica que el archivo ejecutable de Chrome Driver utilizado en clase(chromedriver.exe) se encuentre en la ruta:
 
-    ...\activity3\src\stage3\static\driver\chromedriver.exe
+    ...\scrap_bets\src\stage3\static\driver\chromedriver.exe
 
 6. Ejecuta el archivo principal del proyecto (asegurate de que el archivo de Excel que tiene el listado general de equipos no esté abierto):
 
-    .../activity3/src/stage3/main.py
+    .../scrap_bets/src/stage3/main.py
 
 7. Verifica logs de consola, scrapeo y la creación de tablas con registros en la base de datos PostgreSQL.
 
