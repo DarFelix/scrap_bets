@@ -1,0 +1,38 @@
+name: resuls colombian football
+
+on:
+  push:
+    branches: [ feature ]
+  pull_request:
+    branches: [ dev ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    permissions:
+      contents: write
+  
+    steps:
+      - name: paso1 - ubicacion ruta base
+        uses: actions/checkout@v4
+      - name: paso2 - instalacion python 3.7.9
+        uses: actions/setup-python@v5
+        with:
+            python-version: '>3.9' 
+      - name: paso3 - crea entorno virtual
+        run: python -m venv venv1
+      - name: paso3 - activar entorno virtual
+        run: ./venv1/Scripts/activate   
+      - name: paso3 - actualizar pip
+        run: pip install --upgrade pip
+      - name: paso4 - instalar dependencias
+        run: pip install -e .
+      - name: paso5 - ejecutar proyecto
+        run: python src/stage3/main.py
+      - name: paso6 - auto commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with: 
+          branch: feature
+          commit_user_name: Darwin Felix
+          commit_user_email: xbxb78@gmail.com
+          commit_author: Darfelix
