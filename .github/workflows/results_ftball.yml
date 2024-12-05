@@ -27,6 +27,8 @@ jobs:
         run: pip install --upgrade pip
       - name: paso3.1 - instalar setuptools
         run: pip install setuptools
+      - name: paso3.1 - instalar sqlalchemy
+        run: pip install sqlalchemy
       - name: paso4 - instalar dependencias
         run: pip install -e .
       - name: paso5 - ejecutar proyecto
