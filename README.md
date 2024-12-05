@@ -34,7 +34,7 @@ scrap_bests/
 
 ## 📦 Package descriptions
 
-1. **src/stage3**: Contains modules for web scraping, data transformation, and database interactions in stage 3.
+1. **src/stage3**: Contains files of classes and functions for web scraping, data transformation, and database interactions in stage 3.
 
 
 ## 🛠️ Technologies Used
