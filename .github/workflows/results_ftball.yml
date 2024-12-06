@@ -25,8 +25,8 @@ jobs:
         run: ./venv1/Scripts/activate   
       - name: paso3 - actualizar pip
         run: pip install --upgrade pip
-      - name: paso3.1 - instalar setuptools
-        run: pip install setuptools
+      - name: paso3.1 - instalar numpy y pandas
+        run: pip install numpy==1.26.3 pandas==2.2.3
       - name: paso3.1 - instalar sqlalchemy
         run: pip install sqlalchemy
       - name: paso4 - instalar dependencias
@@ -39,4 +39,4 @@ jobs:
           branch: feature
           commit_user_name: Darwin Felix
           commit_user_email: xbxb78@gmail.com
-          commit_author: Darfelix
+          commit_author: DarFelix
