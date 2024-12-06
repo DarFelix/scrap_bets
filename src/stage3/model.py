@@ -13,8 +13,8 @@ class Modelo:
         self.password = password
         self.schema = schema
         self.conection = None
-        self.conect()
-        
+        #self.conect()
+    """ 
     def conect(self):
         try:
             self.conection = create_engine(
@@ -139,11 +139,15 @@ class Modelo:
             print("Error al leer tabla: "+str(e))
             return pd.DataFrame()
         
-    def get_dict_rp(self):
+    
+
+    """
+
+    def get_dict_rp(self, dict_dfs):
         #se extraen dataframes de las tablas de bases de datos existentes
-        tb_positions = self.read_one_tb("tb_positions")
-        tb_scorers = self.read_one_tb("tb_scorers")
-        tb_teams = self.read_one_tb("tb_teams")
+        tb_positions = dict_dfs["tb_positions"]
+        tb_scorers = dict_dfs["tb_scorers"]
+        tb_teams = dict_dfs["tb_teams"]
         #se arma un diccionario con los datos de las tablas extraidas
         dict_tbs = {}
         dict_tbs["tb_positions"]=tb_positions

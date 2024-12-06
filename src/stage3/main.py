@@ -23,19 +23,20 @@ df_scorers = scrapper.get_table("goleadores")
 print("------------------------")
 #8-se verifica si existe tabla paramétrica para listado de equipos (no se extrajo de una web sino de un archivo Excel, dado
 #  que los equipos que están en la seria A pueden cambiar en cada torneo, porque puede bajar uno de la A y subir uno de la serie B)
-exist_tb_teams = model_db.exist_table_teams("tb_teams")
+#exist_tb_teams = model_db.exist_table_teams("tb_teams")
 print("------------------------")
 #9-se obtiene diccionario de dataframes
-dict_dfs = treat_data.create_dict_dfs(exist_tb_teams, df_positions_teams, df_scorers)
+dict_dfs = treat_data.create_dict_dfs(df_positions_teams, df_scorers)
 print("------------------------")
 #13-se captura imagen de la tabla
-scrapper.screenshot_tb(xpath_tabla="//table")
+#scrapper.screenshot_tb(xpath_tabla="//table")
 #14-se auditan tablas de base de datos
-model_db.audit_gen()
+#model_db.audit_gen()
 #15-se cierra driver
 scrapper.close_driver()
 #------Creación de tabla para reporte en Power BI---------------------------------
 #16-se crea dataframe para reportería transformando y enriquenciendo la info disponible en base de datos
-dict_report = model_db.get_dict_rp()
+dict_report = model_db.get_dict_rp(dict_dfs)
 #se convierte dataframe a formato json
+print('se convierte df a formato json')
 dict_report["tb_report"].to_json("data.json")
