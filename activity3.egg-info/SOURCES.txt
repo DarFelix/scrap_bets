@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+activity3.egg-info/PKG-INFO
+activity3.egg-info/SOURCES.txt
+activity3.egg-info/dependency_links.txt
+activity3.egg-info/requires.txt
+activity3.egg-info/top_level.txt
